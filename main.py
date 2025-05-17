@@ -2,10 +2,14 @@
 from flask import Flask, render_template, session, request ,redirect
 from datetime import datetime
 import pymongo
+import certifi
 
 app= Flask("Review")
 
-mongo = pymongo.MongoClient("mongodb+srv://aya:J4im3l3sgl4c3@cluster0.bud6o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongo = pymongo.MongoClient("mongodb+srv://aya:J4im3l3sgl4c3@cluster0.bud6o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", 
+                            tls=True, 
+                            tlsCAFile=certifi.where()
+                           )
 
 app.secret_key ="cookies"
 ### bdd_utilisateurs = mongo.bdd.utilisateurs

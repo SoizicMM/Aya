@@ -3,4 +3,5 @@ flask
 requests
 jinja2
 pymongo
+certifi
 dnspython

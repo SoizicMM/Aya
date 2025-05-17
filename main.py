@@ -4,8 +4,10 @@ from datetime import datetime
 import pymongo
 
 app= Flask("Review")
-app.secret_key ="cookies"
+
 mongo = pymongo.MongoClient("mongodb+srv://aya:J4im3l3sgl4c3@cluster0.bud6o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+
+app.secret_key ="cookies"
 ### bdd_utilisateurs = mongo.bdd.utilisateurs
 ### mon_utilisateur = bdd_utilisateurs.find_one({"pseudo":"Aya"})
 ### print(mon_utilisateur)
